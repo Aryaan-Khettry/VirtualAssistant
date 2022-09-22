@@ -11,7 +11,7 @@ def assistant_speaks(output):
     global inc # To give each file a new name
     inc += 1
     print("Assistant : "+ output)
-    toSpeak = gTTS(text = output, lang ='en') 
+    toSpeak = gTTS(output, lang ='en') 
     file=str(inc)+".mp3"
     toSpeak.save(file)
     playsound.playsound(file, True) 
@@ -51,7 +51,7 @@ def process_text(input):
             return
   
         elif "who made you" in input or "created you" in input:
-            speak = "I have been created by Aryaan Khettry."
+            speak = "I have been created by Error: Redacted ."
             assistant_speaks(speak)
             return
         
